@@ -10,11 +10,13 @@
     "test": "bun test"
   },
   "dependencies": {
+    "@types/winston": "^2.4.4",
     "bun-plugin-tailwind": "^0.1.2",
     "drizzle-orm": "^0.45.2",
     "react": "^19",
     "react-dom": "^19",
     "tailwindcss": "^4.1.11",
+    "winston": "^3.19.0",
     "zod": "^4.3.6"
   },
   "devDependencies": {

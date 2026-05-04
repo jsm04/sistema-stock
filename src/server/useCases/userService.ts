@@ -2,9 +2,9 @@
 import type { InferSelectModel } from 'drizzle-orm';
 import { eq } from 'drizzle-orm';
 import type { CreateUserInput, LoginInput } from '../validation/user.schema';
-import { users, type DB } from '../persistence/database';
+import { users, type DB, db as dbInstance } from '../persistence/database';
 
-export function userService(db: DB) {
+export function userService(db: DB = dbInstance) {
 	async function hashPassword(password: string): Promise<string> {
 		return Bun.password.hash(password);
 	}
